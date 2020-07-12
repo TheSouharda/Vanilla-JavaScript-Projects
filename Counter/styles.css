@@ -20,3 +20,7 @@ body {
 span {
   display: block;
 }
+
+.value {
+  font-size: 3em;
+}
