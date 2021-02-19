@@ -46,6 +46,8 @@ body {
 .form label {
   display: inline-block;
   margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
 }
 .form-control input {
   display: block;
@@ -91,7 +93,7 @@ body {
 
 .form-control i {
   position: absolute;
-  top: 37px;
+  top: 39px;
   right: 10px;
   visibility: hidden;
 }
