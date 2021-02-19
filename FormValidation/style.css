@@ -60,6 +60,10 @@ body {
   font-size: 14px;
 }
 
+.form-control input:focus {
+  border: none;
+}
+
 .form-control.success input {
   border: 3px solid;
   border-color: #2ecc71;
