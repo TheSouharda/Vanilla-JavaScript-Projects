@@ -1,23 +1,24 @@
-<head>
-  <meta charset="UTF-8" />
-  <title>CodePen - Quiz App</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
-  <!-- partial:index.partial.html -->
-  <div class="quiz-container" id="quiz">
-    <div class="quiz-header">
-      <h2 id="question">Question is loading...</h2>
-      <ul>
-        <li>
-          <input type="radio" name="answer" id="a" class="answer" />
-          <label for="a" id="a_text">Answer...</label>
-        </li>
-        <li>
-          <input type="radio" name="answer" id="b" class="answer" />
-          <label for="b" id="b_text">Answer...</label>
-        </li>
-        <li>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QuizApp</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="quiz-container" id="quiz">
+      <div class="quiz-header">
+        <h2 id="question">Question is loading...</h2>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="a" class="answer" />
+            <label for="a" id="a_text">Answer...</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="b" class="answer" />
+            <label for="b" id="b_text">Answer...</label>
+          </li>
+          <li>
             <input type="radio" name="answer" id="c" class="answer" />
             <label for="c" id="c_text">Answer...</label>
           </li>
@@ -29,7 +30,7 @@
       </div>
       <button id="submit">Submit</button>
     </div>
-      </ul>
-    </div>
-  </div>
-</body>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
