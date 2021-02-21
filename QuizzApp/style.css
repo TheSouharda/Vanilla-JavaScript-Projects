@@ -81,7 +81,7 @@ ul li label {
 }
 
 .showarea {
-  display: none;
+  /* visibility: hidden; */
 }
 
 .reload {

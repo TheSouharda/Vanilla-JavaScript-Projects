@@ -40,8 +40,10 @@ const c = document.getElementById("c_text");
 const d = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
 const answers = document.querySelectorAll(".answer");
+const scoreArea = document.getElementById("showscore");
 
 let currentQuestion = 0;
+let score = 0;
 
 const loadQuestion = () => {
   let quizQuestion = quizData[currentQuestion];
@@ -67,8 +69,18 @@ const getCheckedAns = () => {
 };
 
 submitBtn.addEventListener("click", () => {
-    const answer = getCheckedAns();
-    if () {
-        
-    }
+  const answer = getCheckedAns();
+  console.log(answer);
+  if (answer === quizData[currentQuestion].correct) {
+    score++;
+    console.log(score);
+  }
+  currentQuestion++;
+  if (currentQuestion < quizData.length) {
+    loadQuestion();
+  } else {
+    scoreArea.classList.remove("showarea");
+
+    scoreArea.innerText = `Your score is ${score}/${quizData.length} !!`;
+  }
 });
