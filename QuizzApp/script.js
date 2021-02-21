@@ -41,6 +41,8 @@ const d = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
 const answers = document.querySelectorAll(".answer");
 const scoreArea = document.getElementById("showscore");
+const text = document.querySelector("#showscore h2");
+console.log(text);
 
 let currentQuestion = 0;
 let score = 0;
@@ -81,6 +83,6 @@ submitBtn.addEventListener("click", () => {
   } else {
     scoreArea.classList.remove("showarea");
 
-    scoreArea.innerText = `Your score is ${score}/${quizData.length} !!`;
+    text.innerText = `Your score is ${score}/${quizData.length} !!`;
   }
 });
