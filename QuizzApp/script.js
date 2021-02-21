@@ -69,6 +69,9 @@ const getCheckedAns = () => {
   });
   return checkedAns;
 };
+const deselectAnswers = () => {
+  answers.forEach((answer) => (answer.checked = false));
+};
 
 submitBtn.addEventListener("click", () => {
   const answer = getCheckedAns();
@@ -77,6 +80,7 @@ submitBtn.addEventListener("click", () => {
     score++;
     console.log(score);
   }
+  deselectAnswers();
   currentQuestion++;
   if (currentQuestion < quizData.length) {
     loadQuestion();
