@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -49,23 +48,50 @@ ul li label {
   cursor: pointer;
 }
 
-button {
+.submit {
   background-color: #8e44ad;
   color: #fff;
   border: none;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
   display: block;
-  width: 100%;
+  width: 40%;
+  margin: auto;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: inherit;
-  padding: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.7em;
 }
 
-button:hover {
+.submit:hover {
   background-color: #732d91;
 }
 
-button:focus {
+.submit:focus {
   outline: none;
   background-color: #5e3370;
+}
+
+#showscore {
+  background-color: #e5e9f0;
+  padding: 1em;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.3);
+}
+
+.reload {
+  background-color: #11c9a1;
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 30px 5px rgba(100, 100, 100, 0.3);
+  display: block;
+  width: 30%;
+  margin: auto;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.4em;
 }
