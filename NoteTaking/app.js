@@ -39,13 +39,13 @@ const showNotes = () => {
     existingNotes = JSON.parse(notes);
   }
   let html = "";
-  existingNotes.forEach((element) => {
+  existingNotes.forEach((element, index) => {
     html += `<div class="note m-2">
             <h4 class="note_head">${element.heading}</h4>
             <p class="note_content">
               ${element.text}
             </p>
-            <button type="submit" class="btn btn-primary my-1">Submit</button>
+            <button type="submit" id="${index}" onclick="deleteNode(this.id)" class="btn btn-primary my-1">Submit</button>
           </div>`;
   });
   if (notes.length != 0) {
