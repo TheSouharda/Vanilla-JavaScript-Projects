@@ -17,6 +17,8 @@
       crossorigin="anonymous"
     ></script>
 
+    <script defer src="app.js"></script>
+
     <link rel="stylesheet" href="style.css" />
 
     <title>NoteTaking App</title>
@@ -28,25 +30,23 @@
         <h3>Take your notes at a single comfortable place</h3>
       </div>
       <div class="row">
-        <form>
+        <form id="myform">
           <div class="form-group">
             <label for="heading">Heading</label>
-            <input
-              type="text"
-              class="my-2 form-control"
-              id="exampleInputEmail1"
-            />
+            <input type="text" class="my-2 form-control" id="headingInput" />
           </div>
           <div class="form-group my-2">
             <label for="exampleFormControlTextarea1">Example textarea</label>
             <textarea
               class="form-control my-2"
-              id="exampleFormControlTextarea1"
+              id="textInput"
               rows="3"
             ></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary my-2">Submit</button>
+          <button type="submit" class="btn btn-primary my-2" id="noteInput">
+            Submit
+          </button>
         </form>
       </div>
     </div>
