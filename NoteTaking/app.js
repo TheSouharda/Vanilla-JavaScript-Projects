@@ -53,4 +53,17 @@ const showNotes = () => {
   }
 };
 
+const deleteNode = (index) => {
+  console.log(`deleting ${index}`);
+  let notes = localStorage.getItem("allNotes");
+  if (notes == null) {
+    existingNotes = [];
+  } else {
+    existingNotes = JSON.parse(notes);
+  }
+  existingNotes.splice(index, 1);
+  localStorage.setItem("allNotes", JSON.stringify(existingNotes));
+  showNotes();
+};
+
 showNotes();
