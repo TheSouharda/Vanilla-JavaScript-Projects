@@ -45,7 +45,7 @@ const showNotes = () => {
             <p class="note_content">
               ${element.text}
             </p>
-            <button type="submit" id="${index}" onclick="deleteNode(this.id)" class="btn btn-primary my-1">Submit</button>
+            <button type="submit" id="${index}" onclick="deleteNode(this.id)" class="btn btn-primary my-1">Delete</button>
           </div>`;
   });
   if (notes.length != 0) {
