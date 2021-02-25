@@ -2,6 +2,7 @@ const headingInput = document.getElementById("headingInput");
 const textInput = document.getElementById("textInput");
 const noteInput = document.getElementById("noteInput");
 const myForm = document.getElementById("myform");
+const notesDisp = document.getElementById("notes");
 
 let note = {};
 
@@ -28,3 +29,22 @@ myForm.addEventListener("submit", (e) => {
     alert("Enter all the fields");
   }
 });
+
+const showNotes = () => {
+  let notes = localStorage.getItem("allNotes");
+  if (notes == null) {
+    existingNotes = [];
+  } else {
+    existingNotes = JSON.parse(notes);
+  }
+  let html = "";
+  existingNotes.forEach((element) => {
+    html += `<div class="note m-2">
+            <h4 class="note_head">${element.heading}</h4>
+            <p class="note_content">
+              ${element.text}
+            </p>
+            <button type="submit" class="btn btn-primary my-1">Submit</button>
+          </div>`;
+  });
+};
