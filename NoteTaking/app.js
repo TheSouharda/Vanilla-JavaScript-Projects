@@ -10,8 +10,8 @@ myForm.addEventListener("submit", (e) => {
   const heading = headingInput.value.trim();
   const text = textInput.value.trim();
 
-  let existingNotes = localStorage.getItem("allNotes");
-  if (existingNotes === null) {
+  let existingNotes = JSON.parse(localStorage.getItem("allNotes"));
+  if (existingNotes == null) {
     existingNotes = [];
   }
 
