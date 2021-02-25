@@ -28,6 +28,7 @@ myForm.addEventListener("submit", (e) => {
   } else {
     alert("Enter all the fields");
   }
+  showNotes();
 });
 
 const showNotes = () => {
@@ -47,4 +48,9 @@ const showNotes = () => {
             <button type="submit" class="btn btn-primary my-1">Submit</button>
           </div>`;
   });
+  if (notes.length != 0) {
+    notesDisp.innerHTML = html;
+  }
 };
+
+showNotes();
