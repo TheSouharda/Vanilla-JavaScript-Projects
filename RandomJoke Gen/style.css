@@ -6,12 +6,25 @@
 
 body {
   min-height: 100vh;
-  background-color: aqua;
+  /* background-color: aqua; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.hide {
+  display: none;
+}
+
 .joke_container {
-  background-color: blueviolet;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.joke_container .btn {
+  width: 10em;
 }
