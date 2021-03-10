@@ -24,4 +24,7 @@ main {
 
 nav {
   background-color: var(--bg-secondary);
+  width: 5rem;
+  min-height: 100vh;
+  position: fixed;
 }
