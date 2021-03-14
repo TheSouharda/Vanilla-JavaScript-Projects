@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 :root {
-  --font-style: "Lato", sans-serif;
+  --font-style: "Varela Round", sans-serif;
   --screen-background: #212b41;
   --keypad-background: #2e3951;
   --tertiary-color: #18d4a3;
@@ -60,7 +60,7 @@ body {
   place-items: center;
 }
 button {
-  background: var(--screen-background);
+  background: var(--keypad-background);
   border: none;
   outline: none;
   color: var(--tertiary-color);
@@ -69,6 +69,16 @@ button {
   padding: 1rem;
   width: 4rem;
   height: 4rem;
+  font-family: var(--font-style);
+  font-weight: 500;
+}
+
+.operator {
+  background: var(--screen-background);
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .one {
