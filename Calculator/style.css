@@ -5,6 +5,7 @@
   --screen-background: #212b41;
   --keypad-background: #2e3951;
   --tertiary-color: #18d4a3;
+  font-size: 16px;
 }
 
 *,
@@ -25,4 +26,28 @@ body {
   align-items: center;
   justify-content: center;
   font-family: var(--font-style);
+}
+
+.container {
+  border: 1px solid red;
+}
+
+.calculator_display {
+  width: 20rem;
+  height: 10rem;
+  background-color: var(--screen-background);
+  color: var(--tertiary-color);
+  text-align: right;
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.calculator_keys {
+  background: var(--keypad-background);
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  height: 25rem;
+}
+button {
+  background: var(--keypad-background);
 }
