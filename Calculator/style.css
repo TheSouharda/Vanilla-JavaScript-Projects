@@ -3,6 +3,7 @@
 :root {
   --font-style: "Varela Round", sans-serif;
   --screen-background: #212b41;
+  --body-background: #141b2b;
   --keypad-background: #2e3951;
   --tertiary-color: #18d4a3;
   font-size: 16px;
@@ -26,6 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: var(--font-style);
+  background-color: var(--body-background);
 }
 
 .container {
@@ -65,12 +67,13 @@ button {
   outline: none;
   color: var(--tertiary-color);
   font-size: 2em;
-  border-radius: 50%;
   padding: 1rem;
   width: 4rem;
   height: 4rem;
   font-family: var(--font-style);
   font-weight: 500;
+  transition: 300ms;
+  cursor: pointer;
 }
 
 .operator {
@@ -79,6 +82,16 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+}
+.number {
+  color: darkgray;
+  border-radius: 50%;
+}
+
+.number:hover {
+  background-color: var(--tertiary-color);
+  color: var(--screen-background);
 }
 
 .one {
@@ -113,7 +126,15 @@ button {
 }
 .equal {
   grid-area: equal;
+  background-color: var(--tertiary-color);
+  color: var(--screen-background);
+  height: 16rem;
 }
 .decimal {
   grid-area: decimal;
+}
+
+.equal:hover {
+  background-color: var(--screen-background);
+  color: var(--tertiary-color);
 }
