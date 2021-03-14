@@ -29,11 +29,13 @@ body {
 }
 
 .container {
-  border: 1px solid red;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 0.5em;
+  overflow: hidden;
 }
 
 .calculator_display {
-  width: 20rem;
+  width: 22rem;
   height: 10rem;
   background-color: var(--screen-background);
   color: var(--tertiary-color);
@@ -45,9 +47,63 @@ body {
 .calculator_keys {
   background: var(--keypad-background);
   display: grid;
+  grid-gap: 5px;
   grid-template-columns: repeat(4, auto);
+  grid-template-areas:
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal clear equal";
   height: 25rem;
+  padding: 10px;
+  place-items: center;
 }
 button {
-  background: var(--keypad-background);
+  background: var(--screen-background);
+  border: none;
+  outline: none;
+  color: var(--tertiary-color);
+  font-size: 2em;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.zero {
+  grid-area: zero;
+}
+.equal {
+  grid-area: equal;
+}
+.decimal {
+  grid-area: decimal;
 }
