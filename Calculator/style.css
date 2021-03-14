@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --font-style: "Lato", sans-serif;
+  --screen-background: #212b41;
+  --keypad-background: #2e3951;
+  --tertiary-color: #18d4a3;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-style);
+}
