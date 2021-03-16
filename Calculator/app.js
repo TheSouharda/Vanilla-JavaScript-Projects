@@ -36,10 +36,19 @@ keys.addEventListener("click", (e) => {
       el.classList.remove("selected");
     });
 
+    calculator.dataset.firstNumber = displayValue;
+
     //! Adds the selected class
     key.classList.add("selected");
     console.log(keys);
   }
+
+  if (type === "equal") {
+    const secondNum = display.textContent;
+    const firstNum = calculator.dataset.firstNumber;
+    console.log(firstNum, secondNum);
+  }
+
   //! We make add this dataset to make sure that the last thing pressed was an operator
   calculator.dataset.previousKeyType = type;
 });
