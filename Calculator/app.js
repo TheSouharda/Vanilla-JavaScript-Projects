@@ -24,15 +24,12 @@ keys.addEventListener("click", (e) => {
     } else {
       display.textContent = displayValue + keyValue;
     }
-    calculator.dataset.previousKeyType = "number ";
   }
   //? Is this an operator key
 
   if (type === "operator") {
     console.log(keys);
-
-    //! We make add this dataset to make sure that the last thing pressed was an operator
-
-    calculator.dataset.previousKeyType = type;
   }
+  //! We make add this dataset to make sure that the last thing pressed was an operator
+  calculator.dataset.previousKeyType = type;
 });
