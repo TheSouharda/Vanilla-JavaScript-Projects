@@ -15,19 +15,29 @@ keys.addEventListener("click", (e) => {
 
   if (type === "number") {
     if (displayValue === "0") {
-      console.log(keyValue);
+      //* if displayValue is zero then we can replace it  with keyValue
+
       display.textContent = keyValue;
     } else if (previousKeyType === "operator") {
       //! This makes sure if the last thing pressed was an operator then the subsequent pressed number will be replaced in the display.
 
       display.textContent = keyValue;
     } else {
+      //* if displayValue isnt zero then we attach the subsequent numbers
       display.textContent = displayValue + keyValue;
     }
   }
   //? Is this an operator key
 
   if (type === "operator") {
+    //! Removes the preselcted class
+    const opKeys = document.querySelectorAll(".operator");
+    opKeys.forEach((el) => {
+      el.classList.remove("selected");
+    });
+
+    //! Adds the selected class
+    key.classList.add("selected");
     console.log(keys);
   }
   //! We make add this dataset to make sure that the last thing pressed was an operator
