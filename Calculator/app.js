@@ -2,8 +2,6 @@ const calculator = document.querySelector(".container");
 const display = calculator.querySelector(".calculator_display");
 const keys = calculator.querySelector(".calculator_keys");
 
-console.log(typeof display.textContent);
-
 keys.addEventListener("click", (e) => {
   const key = e.target;
   const keyValue = e.target.textContent;
@@ -36,7 +34,10 @@ keys.addEventListener("click", (e) => {
       el.classList.remove("selected");
     });
 
+    //!Setting up the operands and the operators in HTML
+
     calculator.dataset.firstNumber = displayValue;
+    calculator.dataset.operator = key.dataset.key;
 
     //! Adds the selected class
     key.classList.add("selected");
@@ -44,9 +45,11 @@ keys.addEventListener("click", (e) => {
   }
 
   if (type === "equal") {
+    //!Taking up the operands and the operators in HTML
     const secondNum = display.textContent;
     const firstNum = calculator.dataset.firstNumber;
-    console.log(firstNum, secondNum);
+    const operator = calculator.dataset.operator;
+    console.log(firstNum, operator, secondNum);
   }
 
   //! We make add this dataset to make sure that the last thing pressed was an operator
