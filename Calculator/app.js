@@ -46,10 +46,28 @@ keys.addEventListener("click", (e) => {
 
   if (type === "equal") {
     //!Taking up the operands and the operators in HTML
-    const secondNum = display.textContent;
-    const firstNum = calculator.dataset.firstNumber;
+    const secondNum = parseInt(display.textContent);
+    const firstNum = parseInt(calculator.dataset.firstNumber);
     const operator = calculator.dataset.operator;
+    display.textContent = "";
     console.log(firstNum, operator, secondNum);
+
+    let result;
+    if (operator == "plus") {
+      result = firstNum + secondNum;
+    }
+    if (operator == "minus") {
+      result = firstNum - secondNum;
+    }
+    if (operator == "times") {
+      result = firstNum * secondNum;
+    }
+    if (operator == "divide") {
+      result = firstNum / secondNum;
+    }
+
+    console.log(result);
+    display.textContent = result;
   }
 
   //! We make add this dataset to make sure that the last thing pressed was an operator
