@@ -46,13 +46,24 @@ keys.addEventListener("click", (e) => {
 
   if (type === "equal") {
     //!Taking up the operands and the operators in HTML
-    const secondNum = parseInt(display.textContent);
-    const firstNum = parseInt(calculator.dataset.firstNumber);
+    const secondNum = display.textContent;
+    const firstNum =calculator.dataset.firstNumber;
     const operator = calculator.dataset.operator;
     display.textContent = "";
-    console.log(firstNum, operator, secondNum);
+    display.textContent = calculate(firstNum, operator, secondNum);
+    console.log(display.textContent);
+  }
 
-    let result;
+  //! We make add this dataset to make sure that the last thing pressed was an operator
+  calculator.dataset.previousKeyType = type;
+});
+
+
+const calculate=(firstNum,operator,secondNum)=>{
+  firstNum=parseInt(firstNum);
+  secondNum=parseInt(secondNum)
+
+  let result;
     if (operator == "plus") {
       result = firstNum + secondNum;
     }
@@ -65,11 +76,7 @@ keys.addEventListener("click", (e) => {
     if (operator == "divide") {
       result = firstNum / secondNum;
     }
-
     console.log(result);
-    display.textContent = result;
-  }
+    return result;
 
-  //! We make add this dataset to make sure that the last thing pressed was an operator
-  calculator.dataset.previousKeyType = type;
-});
+};
