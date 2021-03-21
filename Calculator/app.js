@@ -1,6 +1,7 @@
 const calculator = document.querySelector(".container");
 const display = calculator.querySelector(".calculator_display");
 const keys = calculator.querySelector(".calculator_keys");
+const opKeys = document.querySelectorAll(".operator");
 
 keys.addEventListener("click", (e) => {
   const key = e.target;
@@ -29,7 +30,7 @@ keys.addEventListener("click", (e) => {
 
   if (type === "operator") {
     //! Removes the preselcted class
-    const opKeys = document.querySelectorAll(".operator");
+    
     opKeys.forEach((el) => {
       el.classList.remove("selected");
     });
@@ -55,9 +56,16 @@ keys.addEventListener("click", (e) => {
     const secondNum = display.textContent;
     const firstNum =calculator.dataset.firstNumber;
     const operator = calculator.dataset.operator;
+
+    if(!operator){
+      alert("Enter an operator!");
+      return;
+    }
+    console.log(firstNum, operator, secondNum);
     display.textContent = "";
     display.textContent = calculate(firstNum, operator, secondNum);
     console.log(display.textContent);
+    clearOperator();
   }
 
   //! We make add this dataset to make sure that the last thing pressed was an operator
@@ -86,3 +94,11 @@ const calculate=(firstNum,operator,secondNum)=>{
     return result;
 
 };
+
+const clearOperator=()=>{
+  
+  delete calculator.dataset.operator;
+  opKeys.forEach((el) => {
+    el.classList.remove("selected");
+  });
+}
