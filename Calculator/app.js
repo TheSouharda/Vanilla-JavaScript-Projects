@@ -44,6 +44,12 @@ keys.addEventListener("click", (e) => {
     console.log(keys);
   }
 
+  if(type=="clear"){
+    display.textContent=0;
+    delete calculator.dataset.firstNumber;
+    delete calculator.dataset.operator;
+  }
+
   if (type === "equal") {
     //!Taking up the operands and the operators in HTML
     const secondNum = display.textContent;
